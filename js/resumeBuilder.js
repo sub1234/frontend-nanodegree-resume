@@ -80,8 +80,8 @@ var education ={
  $("#header").append(name);
  var role = HTMLheaderRole.replace("%data%",bio.role);
  $("#header").append(role);
- 
- $("#topContacts").append(HTMLemail.replace("%data%",bio.contacts.Email));
+ var email = HTMLemail.replace("%data%",bio.contacts.Email);
+ $("#topContacts").append(email);
 var mobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 $("#topContacts").append(mobile);
 var twitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
