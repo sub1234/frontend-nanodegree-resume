@@ -73,13 +73,10 @@ var education ={
 	
 }]
 };
-
-
-{
- var name = HTMLheaderName.replace("%data%",bio.name);
- $("#header").append(name);
- var role = HTMLheaderRole.replace("%data%",bio.role);
- $("#header").append(role);
+var nam = HTMLheaderName.replace("%data%",bio.name);
+ $("#header").append(nam);
+ var rol = HTMLheaderRole.replace("%data%",bio.role);
+ $("#header").append(rol);
  var email = HTMLemail.replace("%data%",bio.contacts.Email);
  $("#topContacts").append(email);
 var mobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
@@ -90,14 +87,12 @@ var locatio = HTMLemail.replace("%data%",bio.contacts.locatio);
 $("#topContacts").append(locatio);
 var github = HTMLemail.replace("%data%",bio.contacts.github);
 $("#topContacts").append(github);
-
-
 var messs = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
 $("#header").append(messs);
 var picture = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(picture);
 
-}
+
 if(bio.skills.length>0){
 	$("#header").append(HTMLskillsStart);
 	var formatedSkill = HTMLskills.replace("%data%",bio.skills[0]);
@@ -173,7 +168,7 @@ function inName(name){
 		var formattedDescription = HTMLprojectDescription.replace("%data%",projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 		if (projects.projects[project].image.length>0){
-			for(image in projects.projects[project].image){
+			for( var image in projects.projects[project].image){
 				var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].image[image]);
 				$(".project-entry:last"),append(formatedImage);
 			}
