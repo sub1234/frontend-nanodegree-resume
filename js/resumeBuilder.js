@@ -11,7 +11,7 @@ var projects = {
         "title": "Restaurnat billing",
         "dates": "june 2016",
         "description": "A system to generate hotel and resturant bill",
-        "images": ["images\fry.jpg"]
+        "images": ["images/fry.jpg"]
     }],
     display: function () {
         return this;
